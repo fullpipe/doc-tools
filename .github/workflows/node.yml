@@ -23,6 +23,5 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           file: ./node/Dockerfile
-          context: ./node
           push: true
           tags: fullpipe/node:latest
