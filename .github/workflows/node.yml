@@ -27,5 +27,5 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm64/v8
           file: ./node/Dockerfile
           push: true
-          tags: fullpipe/node:latest
+          tags: fullpipe/node:${{ matrix.node }}
           build-args: NODE_VERSION=${{ matrix.node }}
