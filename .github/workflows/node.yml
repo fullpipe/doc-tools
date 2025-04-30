@@ -1,6 +1,8 @@
 name: Build node images
 
 on:
+  schedule:
+    - cron: "1 1 1 * *"
   push:
     branches: ["main"]
 
