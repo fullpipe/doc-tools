@@ -31,9 +31,3 @@ jobs:
           push: true
           tags: fullpipe/node:${{ matrix.node }}
           build-args: NODE_VERSION=${{ matrix.node }}
-      - name: Docker Hub Description
-        uses: peter-evans/dockerhub-description@v4
-        with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: fullpipe/node
