@@ -28,5 +28,4 @@ jobs:
           file: ./node/Dockerfile
           push: true
           tags: fullpipe/node:latest
-          build-args:
-            - NODE_VERSION=${{ matrix.node }}
+          build-args: NODE_VERSION=${{ matrix.node }}
