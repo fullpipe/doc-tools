@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
 jobs:
-  node:
+  web-app:
     runs-on: ubuntu-latest
     environment: docker.io
     steps:
