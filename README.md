@@ -18,3 +18,32 @@ alias npm='docker run --network host -it --rm -v $(pwd):/app -v ~/.npm:/root/.np
 alias node='docker run --network host -it --rm -v $(pwd):/app --workdir /app fullpipe/node:lts node'
 alias npx='docker run --network host -it --rm -v $(pwd):/app --workdir /app fullpipe/node:lts npx'
 ```
+
+## Web app [Caddy]
+
+Caddy image for web apps.
+
+You could change
+
+```Dockerfile
+ENV ROOT=/app
+ENV PORT=8080
+```
+
+### Full example
+
+```Dockerfile
+FROM fullpipe/node:lts AS build
+
+WORKDIR /app
+
+COPY package* .
+RUN npm ci
+
+COPY . .
+RUN npm run build -- --configuration=production
+
+FROM fullpipe/web-app:latest AS release
+
+COPY --from=build /app/www /app
+```
