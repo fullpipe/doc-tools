@@ -4,4 +4,5 @@ FROM node:$NODE_VERSION-alpine
 WORKDIR /app
 
 RUN corepack enable
-RUN npm update -g npm
+RUN npm update -g npm yarn
+RUN apk add --no-cache git
