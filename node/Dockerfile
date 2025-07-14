@@ -3,6 +3,6 @@ FROM node:$NODE_VERSION-alpine
 
 WORKDIR /app
 
+RUN npm install -g npm@latest
+RUN npm install -g yarn@latest
 RUN corepack enable
-RUN npm update -g npm yarn
-RUN apk add --no-cache git
