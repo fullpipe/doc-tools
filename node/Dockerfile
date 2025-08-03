@@ -6,3 +6,4 @@ WORKDIR /app
 RUN corepack enable
 RUN npm update -g npm yarn
 RUN npm install --global npm@latest
+RUN npm install -g @angular/cli
