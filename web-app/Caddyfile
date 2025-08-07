@@ -11,9 +11,7 @@
 	}
 
 	header @index {
-		Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
-		Pragma "no-cache"
-		Expires 0
+		Cache-Control "public, no-cache, proxy-revalidate"
 	}
 
 	root * {$ROOT:/app}
