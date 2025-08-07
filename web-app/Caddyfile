@@ -11,7 +11,8 @@
 	}
 
 	header @index {
-		Cache-Control "public, no-cache, must-revalidate"
+		Cache-Control "public, no-cache, proxy-revalidate"
+		#Cache-Control "public, no-cache, must-revalidate"
 	}
 
 	root * {$ROOT:/app}
