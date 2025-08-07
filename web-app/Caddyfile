@@ -15,7 +15,9 @@
 	}
 
 	root * {$ROOT:/app}
-	try_files {path} /index.html?{query}
+
 	encode
+	try_files {path} /index.html?{query}
+	file_server
 }
 
