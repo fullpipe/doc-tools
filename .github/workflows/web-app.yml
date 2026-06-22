@@ -27,6 +27,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           # file: web-app/Dockerfile
+          platforms: linux/amd64,linux/arm64
           context: web-app
           push: true
           tags: fullpipe/web-app:latest

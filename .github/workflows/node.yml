@@ -13,7 +13,7 @@ jobs:
     environment: docker.io
     strategy:
       matrix:
-        node: [20, 22, lts]
+        node: [lts, latest]
     steps:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
