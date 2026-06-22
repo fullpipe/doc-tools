@@ -8,4 +8,4 @@ RUN npm update -g npm yarn
 RUN npm install --global npm@latest
 RUN npm install -g @angular/cli
 
-RUN apk add --no-cache python3 py3-pip
+RUN apk add --no-cache make gcc g++ python3
